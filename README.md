@@ -11,82 +11,125 @@
 A **modern car rental management system** built with **Laravel 11**, powered by a **Filament 3 Admin Dashboard**, and designed using **TailwindCSS** for a clean and responsive UI.
 
 </div>
+## 🚗 Rental Mobil — Laravel + Filament Admin
 
----
+A modern car rental management system built with Laravel and a Filament admin dashboard. This README covers how to get the project running locally (Windows PowerShell), run tests, and common troubleshooting steps.
 
-## 🌟 **Features**
+## Quick links
 
-✅ User & Admin Authentication  
-✅ Filament Dashboard  
-✅ Car CRUD Management  
-✅ Booking System (User & Admin Side)  
-✅ Financial Report (Export PDF / CSV)  
-✅ Dark / Light Mode Filament Theme  
-✅ Responsive UI (TailwindCSS 3)  
+- Project root: `c:\project\rental-mobil\rental`
+- PHP: 8.2+ (see composer.json)
+- Framework: Laravel
+- Admin: Filament
 
----
+## Contents
 
-## 🏗️ **Tech Stack**
+- Features
+- Tech stack
+- Quick start (Windows PowerShell)
+- Running tests
+- Useful artisan commands & troubleshooting
 
-| Layer | Technology |
-|-------|-------------|
-| **Frontend** | Tailwind CSS + Blade |
-| **Backend** | Laravel 11 |
-| **Admin Dashboard** | Filament v3 |
-| **Database** | MySQL |
-| **Testing** | Pest PHP |
-| **Deployment** | Laravel Artisan / VPS / GitHub Pages |
+## Features
 
----
+- User & Admin Authentication
+- Filament Dashboard (admin resources & pages)
+- Car CRUD Management
+- Booking system (user + admin flows)
+- Financial export (CSV/Excel)
+- Responsive UI with Tailwind CSS
 
-## 🧭 **Folder Structure Overview**
+## Tech stack
 
-```bash
-rental-mobil/
-│
-├── app/
-│   ├── Filament/              # Admin Pages & Resources
-│   ├── Http/Controllers/      # App Controllers
-│   └── Models/                # Database Models
-│
-├── database/
-│   ├── migrations/            # Migration Files
-│   └── seeders/               # Data Seeder Files
-│
-├── public/                    # Public Assets
-├── resources/
-│   ├── views/                 # Blade Templates
-│   ├── css/                   # Tailwind Styles
-│   └── js/                    # Optional JS
-│
-├── routes/
-│   ├── web.php                # Web Routes
-│   └── api.php                # API Routes
-│
-└── tests/                     # PestPHP Tests
+- Backend: PHP (Laravel)
+- Admin UI: Filament
+- Frontend: Blade + Tailwind CSS
+- Database: MySQL (or any DB supported by Laravel)
+- Testing: PHPUnit / Laravel's test helpers
 
-## **⚙️ Installation Guide**
+## Quick start (Windows PowerShell)
 
-# 1️⃣ Clone the repository
+Open PowerShell in the project folder and run the commands below.
+
+1) Clone & install
+
+```powershell
 git clone https://github.com/161-Arfin/rental-mobil.git
-cd rental-mobil
+cd rental-mobil\rental
+composer install --no-interaction --prefer-dist
+npm install
+npm run build
+```
 
-# 2️⃣ Install dependencies
-composer install
-npm install && npm run build
+2) Environment
 
-# 3️⃣ Set up environment
-cp .env.example .env
+```powershell
+copy .env.example .env
 php artisan key:generate
+```
 
-# 4️⃣ Configure database
-# Update DB credentials inside .env file
+Edit `.env` and set your `DB_` values (MySQL credentials). If using SQLite for tests, update `DB_CONNECTION` accordingly.
 
-# 5️⃣ Run migrations & seeders
+3) Database
+
+```powershell
 php artisan migrate --seed
+```
 
-# 6️⃣ Serve the application
-php artisan serve
+4) Run the app
+
+```powershell
+php artisan serve --port=8000
+# then open http://127.0.0.1:8000
+```
+
+## Running tests
+
+Use the Laravel test runner (recommended):
+
+```powershell
+php artisan test
+```
+
+Or run PHPUnit directly if needed:
+
+```powershell
+./vendor/bin/phpunit --filter EmailVerificationTest
+```
+
+If a test produces an HTTP 500, check the application log at `storage/logs/laravel.log` for the full exception and stack trace.
+
+## Useful artisan commands
+
+- Clear application cache:
+
+```powershell
+php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
+```
+
+- Recreate optimized config & route caches (do this in production only):
+
+```powershell
+php artisan config:cache
+php artisan route:cache
+```
+
+## Troubleshooting tips
+
+- Blade compile/view errors: delete `storage/framework/views/*` and run `php artisan view:clear`.
+- If a test or page shows "Route [xyz] not defined": make sure the route exists in `routes/*.php` and that cached routes are cleared.
+- If a Blade file shows "Undefined constant \"request\"": ensure you use `request()` (function) not bare `request` in Blade, or use the `Request` facade correctly.
+
+## Contributing
+
+Feel free to open issues or PRs. For code style follow PSR-12 and keep changes small and focused.
+
+## License
+
+MIT
 
 
 
