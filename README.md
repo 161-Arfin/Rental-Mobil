@@ -70,10 +70,10 @@ rental-mobil/
 ## 📸 **Preview**
 
 ### 🏠 User Homepage
-![User Homepage](https://github.com/161-Arfin/rental-mobil/assets/161-Arfin/abcdef123456)
+![User Carspage](https://github.com/user-attachments/assets/ac2539d7-3f9a-4e1b-ab20-86dd05e0d997)
 
 ### 🧭 Admin Dashboard
-![Admin Dashboard](https://github.com/161-Arfin/rental-mobil/assets/161-Arfin/7890fedcba12)
+![Admin Dashboard](https://github.com/user-attachments/assets/7217052b-02d9-4eec-9053-ceef436b782c)
 
 
 
