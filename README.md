@@ -65,8 +65,7 @@ rental-mobil/
 │
 └── tests/                     # PestPHP Tests
 
-
-
+## **⚙️ Installation Guide**
 
 # 1️⃣ Clone the repository
 git clone https://github.com/161-Arfin/rental-mobil.git
@@ -88,3 +87,7 @@ php artisan migrate --seed
 
 # 6️⃣ Serve the application
 php artisan serve
+
+
+
+
