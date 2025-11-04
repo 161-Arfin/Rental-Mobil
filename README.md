@@ -69,11 +69,12 @@ rental-mobil/
 
 ## 📸 **Preview**
 
-### 🏠 User Homepage
-![User Carspage](https://github.com/user-attachments/assets/ac2539d7-3f9a-4e1b-ab20-86dd05e0d997)
+### 🏠 User Carspage
+[User Carspage](https://github.com/user-attachments/assets/ac2539d7-3f9a-4e1b-ab20-86dd50e0d997)
+
 
 ### 🧭 Admin Dashboard
-![Admin Dashboard](https://github.com/user-attachments/assets/7217052b-02d9-4eec-9053-ceef436b782c)
+[Admin Dashboard](https://github.com/user-attachments/assets/7217052b-02d9-4eec-9053-ceef436b782c)
 
 
 
