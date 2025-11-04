@@ -1,11 +1,15 @@
-* text=auto eol=lf
+# Treat vendor and node_modules as vendored (excluded from language stats)
+vendor/** linguist-vendored
+node_modules/** linguist-vendored
 
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+# Exclude build / compiled assets that shouldn't count
+public/build/** linguist-generated
+public/mix-manifest.json linguist-generated
+storage/** linguist-generated
 
-/.github export-ignore
-CHANGELOG.md export-ignore
-.styleci.yml export-ignore
+# Mark common non-source files as generated
+resources/js/dist/** linguist-generated
+resources/css/dist/** linguist-generated
+
+# Ensure php files are counted as PHP (optional)
+*.php linguist-language=PHP
