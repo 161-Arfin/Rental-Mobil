@@ -67,20 +67,6 @@ rental-mobil/
 
 
 
-## 📸 **Preview**
-
-### 🏠 User Carspage
-[User Carspage](https://github.com/user-attachments/assets/ac2539d7-3f9a-4e1b-ab20-86dd50e0d997)
-
-
-### 🧭 Admin Dashboard
-[Admin Dashboard](https://github.com/user-attachments/assets/7217052b-02d9-4eec-9053-ceef436b782c)
-
-
-
-
-
-## ⚙️ **Installation Guide**
 
 # 1️⃣ Clone the repository
 git clone https://github.com/161-Arfin/rental-mobil.git
